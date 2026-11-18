@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Al Amal Medical Clinic – Book an appointment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="#top"
+          ><span class="logo-mark" aria-hidden="true"></span>Al Amal Medical Clinic</a
+        >
+        <nav class="site-nav" aria-label="Main">
+          <a href="#services">Services</a>
+          <a href="#doctors">Doctors</a>
+          <a href="#appointments">My visits</a>
+          <a href="#visit">Visit us</a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero">
+          <div class="hero-intro">
+            <h1>See a doctor this week, not next month.</h1>
+            <p>
+              Pick a service, a doctor and a time. You will get a booking
+              confirmation straight away, and you can cancel any time before
+              your visit.
+            </p>
+            <ul class="facts">
+              <li><strong>Open</strong> Saturday to Thursday, 9:00 to 17:00</li>
+              <li><strong>Closed</strong> Fridays and public holidays</li>
+              <li>
+                <strong>Urgent?</strong> Call 9999 0000 or go to your nearest
+                emergency department.
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel">
+
+            <form id="booking-form" novalidate>
+              <h2>Book an appointment</h2>
+
+              <label class="field-label" for="service-select">Service</label>
+              <select id="service-select"></select>
+
+              <label class="field-label" for="doctor-select">Doctor</label>
+              <select id="doctor-select"></select>
+
+              <p class="field-label">Day</p>
+              <div class="day-list" id="day-list"></div>
+
+              <p class="field-label">Time</p>
+              <div class="slot-list" id="slot-list"></div>
+
+              <label class="field-label" for="name-input">Full name</label>
+              <input id="name-input" type="text" autocomplete="name" />
+
+              <label class="field-label" for="phone-input">Phone number</label>
+              <input id="phone-input" type="tel" autocomplete="tel" />
+
+              <p class="form-error" id="form-error" role="alert"></p>
+              <button type="submit" class="btn">Confirm appointment</button>
+            </form>
+
+            <div class="confirmation" id="confirmation" hidden>
+              <div class="confirmation-icon" aria-hidden="true">✓</div>
+              <h2 id="confirmation-title"></h2>
+              <p class="confirmation-note">
+                Please arrive 10 minutes early and bring your ID.
+              </p>
+              <dl class="confirmation-details" id="confirmation-details"></dl>
+              <button type="button" class="btn" id="book-again-btn">
+                Book another visit
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="block" id="services">
+          <h2>Services</h2>
+          <div class="grid" id="services-list"></div>
+        </section>
+
+        <section class="block" id="doctors">
+          <h2>Our doctors</h2>
+          <div class="grid" id="doctors-list"></div>
+        </section>
+
+        <section class="block" id="appointments">
+          <h2>My appointments</h2>
+          <div id="appointments-list"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="visit">
+        <p>
+          Al Amal Medical Clinic, 12 Harbour Road. Phone 9999 0000.
+          hello@alamalclinic.example
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
